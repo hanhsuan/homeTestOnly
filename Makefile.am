@@ -178,6 +178,9 @@ EXTRA_DIST = $(DOC_FILES) $(man_MANS) $(TESTS) $(TEST_LOG_COMPILER)     \
 docdir = ${datadir}/doc/${PACKAGE}
 dist_doc_DATA = AUTHORS README
 
+# add testing.sh as scripts that has to be copied to bindir
+dist_bin_SCRIPTS = debian/testing.sh
+
 RELEASE ?= 1
 rpm: dist jq.spec
 	@echo "Packaging jq as an RPM ..."
